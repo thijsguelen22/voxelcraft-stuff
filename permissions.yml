@@ -1,0 +1,256 @@
+groups:
+  GlobalAllow:
+    options:
+      default: false
+    permissions:
+    - factions.kit.halfplayer
+    - essentials.help
+    - modifyworld.*
+    - multiverse.portal.access.*
+    - multiverse.access.world
+    - multiverse.access.survival
+    - multiverse.access.survival_nether
+    - -multiverse.access.survival_the_end
+    - essentials.spawn
+    - essentials.home
+    - essentials.sethome
+    - essentials.back
+    - essentials.kit
+    - essentials.rules
+    - essentials.msg
+    - essentials.help
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.bal
+    - essentials.balance
+    - essentials.worth
+    - essentials.warp
+    - essentials.sell
+    - essentials.sell.*
+    - essentials.balancetop
+    - -factions.override
+    - blockhunt.player
+    - -permissions.manage
+  Member:
+    inheritance:
+    - GlobalAllow
+    options:
+      build: false
+      default: true
+    permissions:
+    - factions.kit.fullplayer
+    Worlds:
+      World:
+        permissions:
+        - -factions.*
+        - -modifyworld.*
+        - -essentials.tpa
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+        - -essentials.sell
+        - -essentials.sell.*
+      survival:
+        permissions:
+        - modifyworld.*
+        - essentials.spawn
+        - -factions.override
+        - essentials.tpa
+        - essentials.tpaccept
+        - essentials.tpdeny
+        - essentials.sell
+        - essentials.sell.*
+  VIP:
+    inheritance:
+    - GlobalAllow
+    options:
+      build: false
+      default: false
+    permissions:
+    - factions.kit.fullplayer
+    Worlds:
+      World:
+        permissions:
+        - -essentials.tpa
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+        - -essentials.sell
+        - -essentials.sell.*
+      survival:
+        permissions:
+        - modifyworld.*
+        - essentials.spawn
+        - -factions.override
+        - essentials.tpa
+        - essentials.tpaccept
+        - essentials.tpdeny
+        - essentials.sell
+        - essentials.sell.*
+  Mod:
+    inheritance:
+    - GlobalAllow
+    - Builder+
+    options:
+      default: false
+    permissions:
+    - permissions.manage.membership.Member
+    - permissions.manage.membership.Builder+
+    - -permissions.manage.membership.Mod
+    - -permissions.manage.membership.VIP
+    - -permissions.manage.membership.Admin
+    - -permissions.manage.membership.Owner
+    - worldguard.region.bypass.*
+    - factions.kit.mod
+    - essentials.clearinventory
+    - essentials.clearinventory.others
+    - essentials.invsee
+    - essentials.invsee.modify
+    - essentials.invsee.preventmodify
+    - essentials.world.<worldname>
+    - essentials.ban
+    - essentials.ban.exempt
+    - essentials.ban.notify
+    - essentials.ban.offline
+    - essentials.banip
+    - essentials.banip.notify
+    - essentials.tempban
+    - essentials.tempban.exempt
+    - essentials.tempban.offline
+    - essentials.unban
+    - essentials.unbanip
+    - essentials.kick
+    - essentials.kick.exempt
+    - essentials.kick.notify
+    - essentials.getpos
+    - essentials.getpos.others
+    - essentials.home
+    - essentials.home.others
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.sell
+    - essentials.sell.*
+    worlds:
+      world:
+        permissions:
+        - essentials.fly
+      survival:
+        permissions:
+        - -essentials.fly
+  Builder+:
+    inheritance:
+    - GlobalAllow
+    options:
+      default: false
+    worlds:
+      world:
+        permissions:
+        - mv.bypass.gamemode.*
+        - gm.creative
+        - gm.survival
+        - -multiverse.access.world_nether
+        - essentials.tp
+        - essentials.tpa
+        - essentials.tpaccept
+        - essentials.tpdeny
+        - -essentials.sell
+        - -essentials.sell.*
+      survival:
+        permissions:
+        - worldguard.region.bypass.*
+        - -gm.creative
+        - gm.survival
+        - -essentials.tp
+        - essentials.tpa
+        - essentials.tpaccept
+        - essentials.tpdeny
+        - essentials.sell
+        - essentials.sell.*
+    permissions:
+    - modifyworld.*
+    - multiverse.portal.access.*
+    - multiverse.access.*
+    - essentials.spawn
+    - essentials.home
+    - essentials.sethome
+    - essentials.back
+    - worldedit.*
+    - gm.adventure
+    - -essentials.gamemode
+  Admin:
+    inheritance:
+    - Mod
+    options:
+      build: true
+      default: false
+    permissions:
+    - permissions.manage.membership.Member
+    - permissions.manage.membership.Builder+
+    - permissions.manage.membership.Mod
+    - -permissions.manage.membership.VIP
+    - -permissions.manage.membership.Admin
+    - -permissions.manage.membership.Owner
+    - factions.kit.admin
+    - mv.bypass.gamemode.*
+    - multiverse.*
+    - modifyworld.*
+    - worldedit.*
+    - essentials.*
+    - essentials.gamemode
+    - gm.*
+    - permissions.*
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.sell
+    - essentials.sell.*
+    - blockhunt.admin
+    - permissions.manage.reload
+  Owner:
+    inheritance:
+    - Admin
+    options:
+      default: false
+    permissions:
+    - permissions*
+    - essentials.*
+schema-version: 1
+users:
+  9ef9808f-2aa9-4c7b-8f1c-856609cc6113:
+    group:
+    - Owner
+    options:
+      name: thijsguelen22
+  52e4b3ca-0c7f-40f5-943a-00f183e655e8:
+    group:
+    - Mod
+    options:
+      name: 496Tauras
+  b702e30e-bb8a-4c2f-9aac-185027b17bf3:
+    options:
+      name: I_IDosX
+    group:
+    - Member
+  b5c3f656-e05a-4d0f-b053-1e30f3777a3a:
+    options:
+      name: Bottles999
+    group:
+    - Mod
+  shadowcat555:
+    group:
+    - Builder+
+  9bdedf2d-80a0-42c0-94e5-e2907845fc24:
+    group:
+    - Admin
+    options:
+      name: Cynaera
+  6cf59c0e-5f8b-4f80-af72-46f3bafb8133:
+    group:
+    - Member
+    options:
+      name: YolorezDesu
+  cb3c70ce-2905-40a5-bcc8-684f81e3b617:
+    group:
+    - Admin
+    options:
+      name: CptDK
