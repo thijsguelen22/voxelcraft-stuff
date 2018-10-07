@@ -29,7 +29,6 @@ groups:
     - essentials.sell
     - essentials.sell.*
     - essentials.balancetop
-    - -factions.override
     - blockhunt.player
     - -permissions.manage
   Member:
@@ -54,7 +53,6 @@ groups:
         permissions:
         - modifyworld.*
         - essentials.spawn
-        - -factions.override
         - essentials.tpa
         - essentials.tpaccept
         - essentials.tpdeny
@@ -80,7 +78,6 @@ groups:
         permissions:
         - modifyworld.*
         - essentials.spawn
-        - -factions.override
         - essentials.tpa
         - essentials.tpaccept
         - essentials.tpdeny
